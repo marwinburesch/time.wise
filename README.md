@@ -26,7 +26,7 @@ This project uses SASS, you know what to do...
 - [ ] add a container to show the total
 - [ ] add a section for user input
 - [ ] add an add-button
-- [ ] read example-entries from an object
+- [ ] read example-entries from an array
 - [ ] render the information to the list
 - [ ] add functionality to the input section/button
 - [ ] implement localStorage
