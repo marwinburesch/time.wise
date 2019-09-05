@@ -18,7 +18,7 @@ This project uses SASS, you know what to do...
 - [ ] add a section for user input
 - [ ] add an add-button
 - [ ] read example-entries from an object
-- [ ] render the read information to the list
+- [ ] render the information to the list
 - [ ]
 - [ ]
 - [ ]

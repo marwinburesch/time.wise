@@ -1,5 +1,9 @@
 $primary: #b1c9ce;
 $sausages: #b5b3c3;
+$listAlt: #c7bcc7;
+$backgroundMain: #565369;
+$color: #e1c3ce;
+$beige: #f0ded2;
 
 body {
   position: relative;
@@ -30,8 +34,8 @@ body {
 .halp {
   position: absolute;
   z-index: 1;
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
