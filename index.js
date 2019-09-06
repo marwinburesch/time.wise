@@ -1,4 +1,5 @@
-import { renderMain } from "./modules/render.js";
-// import { renderMain as render } from "./modules/input.js";
+import { renderMain as render } from "./modules/render.js";
+import { updateTotal as update } from "./modules/render.js";
 
-renderMain();
+render();
+update();
