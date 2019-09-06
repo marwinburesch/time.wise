@@ -1,5 +1,5 @@
-import { renderMain as render } from "./modules/render.js";
-import { updateTotal as update } from "./modules/render.js";
+import { render } from "./modules/render.js";
+import { initSubmitButton } from "./modules/input.js";
 
+initSubmitButton();
 render();
-update();

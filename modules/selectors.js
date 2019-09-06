@@ -1,7 +1,3 @@
-export function get(sel) {
-  return document.querySelector(sel);
-}
-
-export function getAll(sel, target = document) {
-  return Array.from(target.querySelectorAll(sel));
+export function get(sel, target = document) {
+  return target.querySelector(sel);
 }

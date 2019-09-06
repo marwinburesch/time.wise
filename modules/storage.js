@@ -1,25 +1,25 @@
-// TODO: move entries to input | implement localStorage
+import { render } from "./render.js";
 
-export let items = [
-  {
-    activity: "cooking",
-    hours: 2
-  },
+function setItemsToStorage(value) {
+  localStorage.setItem("items", JSON.stringify(value));
+}
 
-  {
-    activity: "sleep",
-    hours: 7
-  },
-  {
-    activity: "javascript",
-    hours: 3
-  },
-  {
-    activity: "dancing",
-    hours: 4
+export function getItemsFromStorage() {
+  const items = localStorage.getItem("items");
+  if (items) {
+    return JSON.parse(items);
   }
-];
+  return null;
+}
 
-export function addItem(activity, hours) {
-  items = [...items, { activity: activity, hours: hours }];
+export function saveItem(activity, hours) {
+  const items = getItemsFromStorage();
+  let newItems;
+  if (items == null) {
+    newItems = [{ activity: activity, hours: parseInt(hours) }];
+  } else {
+    newItems = [...items, { activity: activity, hours: parseInt(hours) }];
+  }
+  setItemsToStorage(newItems);
+  render();
 }
