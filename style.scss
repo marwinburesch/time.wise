@@ -94,3 +94,40 @@ footer {
   flex-grow: 0;
   background: $primary;
 }
+
+form {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+input {
+  border: solid 2px $highlight;
+  box-shadow: 0 3px 10px grey;
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: $primary;
+  border: solid 2px $highlight;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px grey;
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
