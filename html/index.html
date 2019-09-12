@@ -6,21 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>time.wise</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="top">header</div>
-      <div class="middle">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-      </div>
-      <div class="bottom">footer</div>
-    </div>
-    <div class="halp">
-      OH NO! What happened here?! <br /><br />Please help me to clean up!<br /><br />
-      <button class="cmiyc">OK!</button>
+    <div class="sitewrapper">
+      <header>time.<strong>wise</strong></header>
+      <main>
+        <section class="items"></section>
+        <section class="item total"></section>
+      </main>
+      <footer>
+        <input class="activity" type="text" placeholder="activity" />
+        <input class="hours" type="number" placeholder="hours" />
+        <button class="submitButton">+</button>
+      </footer>
     </div>
   </body>
+  <script type="module" src="index.js"></script>
 </html>
