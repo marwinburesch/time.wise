@@ -1,9 +1,8 @@
-$primary: #b1c9ce;
-$secondary: #e1c3ce;
-$background: #565369;
-$list-item__primary: #b5b3c3;
-$list-item__alt: #c7bcc7;
-$highlight: #f0ded2;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 body {
   height: 100vh;
@@ -23,7 +22,9 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2.5% 0 2.5% 0;
-  @media (max-width: 420px) {
+}
+@media (max-width: 420px) {
+  .sitewrapper {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -33,7 +34,7 @@ body {
 header {
   z-index: 2;
   height: 60px;
-  background: $primary;
+  background: #b1c9ce;
   box-shadow: 0 3px 10px grey;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -41,10 +42,12 @@ header {
   line-height: 60px;
   font-size: 1.5em;
   font-weight: 200;
-  strong {
-    font-weight: 700;
-  }
-  @media (max-width: 420px) {
+}
+header strong {
+  font-weight: 700;
+}
+@media (max-width: 420px) {
+  header {
     border-radius: 0;
   }
 }
@@ -57,85 +60,87 @@ main {
   overflow: auto;
 }
 
-footer {
+footer > div {
   z-index: 2;
   height: 80px;
-  background: $secondary;
+  background: #e1c3ce;
   box-shadow: 0 -3px 10px grey;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 420px) {
+}
+@media (max-width: 420px) {
+  footer > div {
     border-radius: 0;
   }
 }
 
 .items {
   flex-grow: 1;
-  > :nth-child(2n + 2) {
-    background: $list-item__alt;
-  }
+}
+.items > :nth-child(2n + 2) {
+  background: #c7bcc7;
 }
 
 .item {
   height: 40px;
-  background: $list-item__primary;
+  background: #b5b3c3;
   padding: 0 10px 0 10px;
   line-height: 40px;
   display: flex;
   justify-content: space-between;
-  em {
-    font-weight: 200;
-  }
-  strong {
-    font-weight: 400;
-  }
+}
+.item em {
+  font-weight: 200;
+}
+.item strong {
+  font-weight: 400;
 }
 
 .total {
   flex-grow: 0;
-  background: $primary;
+  background: #b1c9ce;
 }
 
 input {
   height: 35px;
-  border: solid 2px $highlight;
+  border: solid 2px #f0ded2;
   border-radius: 10px;
   box-shadow: 0 5px 10px grey;
   font-size: 20px;
-  &:focus {
-    outline: none;
-  }
-  &.activity {
-    width: 40%;
-    text-align: center;
-  }
-  &.hours {
-    width: 20%;
-    text-align: center;
-  }
+}
+input:focus {
+  outline: none;
+}
+input.activity {
+  width: 40%;
+  text-align: center;
+}
+input.hours {
+  width: 20%;
+  text-align: center;
 }
 
 button {
   width: 40px;
   height: 40px;
   padding: 0;
-  background: $primary;
-  border: solid 2px $highlight;
+  background: #b1c9ce;
+  border: solid 2px #f0ded2;
   border-radius: 20px;
   box-shadow: 0 3px 10px grey;
   font-size: 24px;
   font-weight: bolder;
   color: white;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    transform: scale(1.04);
-  }
-  &:active {
-    transform: scale(0.9);
-  }
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  transform: scale(1.04);
+}
+button:active {
+  transform: scale(0.9);
 }
