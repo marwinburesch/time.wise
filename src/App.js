@@ -4,19 +4,19 @@ import Title from "./components/Title";
 import Items from "./components/Items";
 import ItemsTotal from "./components/ItemsTotal";
 import NewItem from "./components/NewItem";
-import {
-  setItem as setStorageItem,
-  getItem as getStorageItem
-} from "./api/storage";
+// import {
+//   setItem as setStorageItem,
+//   getItem as getStorageItem
+// } from "./api/storage";
 
 function App() {
-  const [items, setItems] = React.useState(getStorageItem("items") || []);
+  const [items, setItems] = React.useState([]);
 
   function handleAdd(newItem) {
     const newItems = items.slice();
     newItems.push(newItem);
     setItems(newItems);
-    setStorageItem("items", newItems);
+    // setStorageItem("items", newItems);
   }
 
   return (
