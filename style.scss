@@ -1,12 +1,14 @@
-$primary: #b1c9ce;
-$sausages: #b5b3c3;
-$listAlt: #c7bcc7;
-$backgroundMain: #565369;
-$color: #e1c3ce;
+$primary: hsla(197, 51%, 45%, 0.2);
+$sausages: hsl(197, 49%, 40%);
+$listAlt: hsl(197, 51%, 34%);
+$backgroundMain: hsl(220, 13%, 18%);
+$color: #ffffff;
 $beige: #f0ded2;
 
 body {
   position: relative;
+  background: $backgroundMain;
+  color: $color;
 }
 
 .container {
@@ -44,6 +46,7 @@ body {
   background: aquamarine;
   top: 50px;
   left: 200px;
+  color: black;
 }
 
 .cmiyc {
