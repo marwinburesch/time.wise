@@ -1,9 +1,8 @@
-$primary: #b1c9ce;
-$secondary: #e1c3ce;
-$background: #565369;
-$list-item__primary: #b5b3c3;
-$list-item__alt: #c7bcc7;
-$highlight: #f0ded2;
+$primary: hsla(197, 51%, 45%, 0.2);
+$list-item__primary: hsl(197, 49%, 40%);
+$list-item__alt: hsl(197, 51%, 34%);
+$site-background: hsl(220, 13%, 18%);
+$textcolor: white;
 
 body {
   height: 100vh;
@@ -13,13 +12,13 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  background: $site-background;
 }
 
 .sitewrapper {
   height: 95%;
   width: 75%;
-  background: #565369;
-  border-radius: 11px;
+  background: $primary;
   display: flex;
   flex-direction: column;
   margin: 2.5% 0 2.5% 0;
@@ -33,10 +32,8 @@ body {
 header {
   z-index: 2;
   height: 60px;
-  background: $primary;
-  box-shadow: 0 3px 10px grey;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background: $site-background;
+  color: $textcolor;
   text-align: center;
   line-height: 60px;
   font-size: 1.5em;
@@ -59,16 +56,13 @@ main {
 footer {
   z-index: 2;
   height: 80px;
-  background: $secondary;
-  box-shadow: 0 -3px 10px grey;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   @media (max-width: 420px) {
     border-radius: 0;
   }
 }
 
 .items {
+  color: $textcolor;
   flex-grow: 1;
   > :nth-child(2n + 2) {
     background: $list-item__alt;
@@ -92,5 +86,6 @@ footer {
 
 .total {
   flex-grow: 0;
-  background: $primary;
+  background: $site-background;
+  color: $textcolor;
 }
